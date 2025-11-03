@@ -178,12 +178,19 @@ WantedBy=default.target
 Simpan dengan ctrl+x kemudia Y kemudian Enter
 
 ## Restore Config Genieacs pada repositori ini.
+Install terlebih dahulu git di server Ubuntu 22.04
+```
+sudo apt install git -y
+```
+Clone repositories
 ```
 git clone https://github.com/ariemus-smk/genieacs.git
 ```
+masuk ke direktory backup genieacs
 ```
 cd genieacs/genieacs-update
 ```
+Jalankan perintah restore mogodb
 ```
 sudo mongorestore --db genieacs --drop genieacs
 ```
